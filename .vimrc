@@ -137,8 +137,8 @@ tnoremap <F1> <C-W>N
 " Add coordination line
 " set bg=dark
 set cursorline
-set cursorcolumn
-set colorcolumn=81
+"set cursorcolumn
+"set colorcolumn=81
 
 " See [http://vim.wikia.com/wiki/Highlight_unwanted_spaces]
 " - highlight trailing whitespace in red

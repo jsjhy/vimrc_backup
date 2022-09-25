@@ -46,12 +46,15 @@ endif " has("autocmd")
 call plug#begin()
 	Plug 'scrooloose/nerdtree'
 	Plug 'gitgutter/Vim'
-	" Plug 'junegunn/fzf.vim'
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
+	"Plug 'junegunn/fzf.vim'
+	"Plug 'vim-airline/vim-airline'
+	"Plug 'vim-airline/vim-airline-themes'
 	Plug 'tpope/vim-commentary'
+	Plug 'itchyny/lightline.vim'
 call plug#end()
 "-------------
+"lightline
+set laststatus =2
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -99,10 +102,6 @@ set ignorecase smartcase
 " map tab
 nmap tn :tabn<cr>
 nmap tp :tabp<cr>
-
-" set airline to use powerline fonts
-"let g:airline_powerline_fonts = 1
-let g:airline_theme='atomic'
 
 set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
 

@@ -4,6 +4,7 @@ set history=100        " keep 50 lines of command line history
 set ruler        " show the cursor position all the time
 set showcmd        " display incomplete commands
 set incsearch        " do incremental searching
+set hlsearch        " do incremental searching
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
   set mouse=a
@@ -122,7 +123,7 @@ function! LookUpwards()
 endfunction
 
 imap <silent> <C-Y> <C-R><C-R>=LookUpwards()<CR>
-noremap <CR> :nohlsearch<CR>
+noremap <leader><CR> :nohlsearch<CR>
 
 nmap <leader>fg :!grep -rn <C-R><C-R>=expand("<cword>")<CR>
 

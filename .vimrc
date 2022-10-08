@@ -52,8 +52,22 @@ call plug#begin()
 	"Plug 'vim-airline/vim-airline-themes'
 	Plug 'tpope/vim-commentary'
 	Plug 'itchyny/lightline.vim'
+	Plug 'skywind3000/vim-auto-popmenu'
+	Plug 'skywind3000/vim-dict'
+	Plug 'jiangmiao/auto-pairs'
 call plug#end()
+
+" vim-auto-popmenu
+" enable this plugin for filetypes, '*' for all files.
+let g:apc_enable_ft = {'text':1, 'markdown':1, 'c':1}
+" source for dictionary, current or other loaded buffers, see ':help cpt'
+set cpt=.,k,w,b
+" don't select the first item.
+set completeopt=menu,menuone,noselect
+" suppress annoy messages.
+set shortmess+=c
 "-------------
+
 "lightline
 set laststatus =2
 
@@ -86,7 +100,7 @@ nmap <C-v> "+p
 " set nerdtree mapping
 " map <F3> :NERDTreeMirror<cr>
 let g:NERDTreeShowLineNumbers=1
-map <F3> :NERDTreeToggle<cr>
+map <F2> :NERDTreeToggle<CR>
 "map <F4> :NERDTreeToggle<cr>:NERDTreeCWD<cr>
 
 " show history list

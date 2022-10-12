@@ -56,6 +56,7 @@ call plug#begin()
 	Plug 'skywind3000/vim-auto-popmenu'
 	Plug 'skywind3000/vim-dict'
 	Plug 'jiangmiao/auto-pairs'
+	Plug 'crusoexia/vim-monokai'
 call plug#end()
 
 " vim-auto-popmenu
@@ -97,6 +98,10 @@ autocmd BufEnter * if expand("%:p:h") !~ '^/tmp' | silent! lcd %:p:h | endif
 vmap <C-c> "+y
 nmap <C-a> ggVG
 nmap <C-v> "+p
+
+"T--Top of screen  B--Bottom of screen
+nmap T H
+nmap B L
 
 " set nerdtree mapping
 " map <F3> :NERDTreeMirror<cr>

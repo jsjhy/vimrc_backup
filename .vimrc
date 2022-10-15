@@ -48,15 +48,15 @@ endif " has("autocmd")
 call plug#begin()
 	Plug 'scrooloose/nerdtree'
 	Plug 'gitgutter/Vim'
-	"Plug 'junegunn/fzf.vim'
-	"Plug 'vim-airline/vim-airline'
-	"Plug 'vim-airline/vim-airline-themes'
+	" Plug 'junegunn/fzf.vim'
+	" Plug 'vim-airline/vim-airline'
+	" Plug 'vim-airline/vim-airline-themes'
 	Plug 'tpope/vim-commentary'
 	Plug 'itchyny/lightline.vim'
 	Plug 'skywind3000/vim-auto-popmenu'
 	Plug 'skywind3000/vim-dict'
 	Plug 'jiangmiao/auto-pairs'
-	Plug 'crusoexia/vim-monokai'
+	" Plug 'crusoexia/vim-monokai'
 call plug#end()
 
 " vim-auto-popmenu
@@ -102,6 +102,8 @@ nmap <C-v> "+p
 "T--Top of screen  B--Bottom of screen
 nmap T H
 nmap B L
+nmap <Leader>t <C-u>
+nmap <Leader>b <C-d>
 
 " set nerdtree mapping
 " map <F3> :NERDTreeMirror<cr>
@@ -173,4 +175,5 @@ autocmd BufWinLeave * call clearmatches() " for performance
 
 " colorschema
 set background=dark
+"colorscheme monokai
 

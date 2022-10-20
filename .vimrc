@@ -95,36 +95,36 @@ set noswapfile
 autocmd BufEnter * if expand("%:p:h") !~ '^/tmp' | silent! lcd %:p:h | endif
 
 " ctrl c and v to clipboard
-vmap <C-c> "+y
-nmap <C-a> ggVG
-nmap <C-v> "+p
+vnoremap <C-c> "+y
+nnoremap <C-a> ggVG
+nnoremap <C-v> "+p
 
 "T--Top of screen  B--Bottom of screen
-nmap T H
-nmap B L
-nmap <Leader>t <C-u>
-nmap <Leader>b <C-d>
+nnoremap T H
+nnoremap B L
+nnoremap <Leader>t <C-u>
+nnoremap <Leader>b <C-d>
 
 " set nerdtree mapping
 " map <F3> :NERDTreeMirror<cr>
 let g:NERDTreeShowLineNumbers=1
-map <F2> :NERDTreeToggle<CR>
+noremap <F2> :NERDTreeToggle<CR>
 "map <F4> :NERDTreeToggle<cr>:NERDTreeCWD<cr>
 
 " show history list
-nmap <leader>lh :bro ol<cr>
-nmap bu :<C-U>execute 'buffer ' . v:count<CR>
-nmap bn :bn<cr>
-nmap bp :bp<cr>
-nmap <leader>lb :ls<cr>
+nnoremap <leader>lh :bro ol<cr>
+nnoremap bu :<C-U>execute 'buffer ' . v:count<CR>
+nnoremap bn :bn<cr>
+nnoremap bp :bp<cr>
+nnoremap <leader>lb :ls<cr>
 
 " set fdm=indent
 set autowrite
 set ignorecase smartcase
 
-" map tab
-nmap tn :tabn<cr>
-nmap tp :tabp<cr>
+" use xgt or gt !!!  " map tab
+" nnoremap tn :tabn<cr>
+" nnoremap tp :tabp<cr>
 
 set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
 
@@ -147,9 +147,9 @@ endfunction
 imap <silent> <C-Y> <C-R><C-R>=LookUpwards()<CR>
 noremap <leader><CR> :nohlsearch<CR>
 
-nmap <leader>fg :!grep -rn <C-R><C-R>=expand("<cword>")<CR>
+nnoremap <leader>fg :!grep -rn <C-R><C-R>=expand("<cword>")<CR>
 
-map <F5> :bel term<CR>
+noremap <F5> :bel term<CR>
 
 " Do not show the message at launching nothing
 set shortmess=atI

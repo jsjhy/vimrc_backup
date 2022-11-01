@@ -155,6 +155,7 @@ noremap <F5> :bel term<CR>
 set shortmess=atI
 
 tnoremap <F1> <C-W>N
+tnoremap <ESC><ESC> <C-W>N
 
 " Add coordination line
 " set bg=dark

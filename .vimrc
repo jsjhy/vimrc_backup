@@ -178,4 +178,4 @@ autocmd BufWinLeave * call clearmatches() " for performance
 " colorschema
 set background=dark
 "colorscheme monokai
-
+set guifont=:h14
